@@ -1,0 +1,23 @@
+# Core
+numpy
+python-dotenv
+
+# Embeddings
+sentence-transformers
+torch
+
+# Vector Store / Similarity
+faiss-cpu
+
+# LLM / Generation
+langchain
+langchain-community
+
+# Optional (only if using Gemini / OpenAI)
+google-generativeai
+
+# Document Loading
+pypdf
+
+# App (only if you have UI)
+streamlit
