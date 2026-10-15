@@ -1,0 +1,3 @@
+sqlite3.Connection.iterdump
+
+Returns iterator to the dump of the database in an SQL text format.

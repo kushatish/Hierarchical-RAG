@@ -1,0 +1,16 @@
+statistics.quantiles
+
+Divide *data* into *n* continuous intervals with equal probability.
+
+Returns a list of (n - 1) cut points separating the intervals.
+
+Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles.
+Set *n* to 100 for percentiles which gives the 99 cuts points that
+separate *data* in to 100 equal sized groups.
+
+The *data* can be any iterable containing sample.
+The cut points are linearly interpolated between data points.
+
+If *method* is set to *inclusive*, *data* is treated as population
+data.  The minimum value is treated as the 0th percentile and the
+maximum value is treated as the 100th percentile.

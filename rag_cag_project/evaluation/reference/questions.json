@@ -1,0 +1,600 @@
+[
+  {
+    "id": "ref-001",
+    "question": "What does ensure_ascii=False change when serializing JSON?",
+    "relevant_sources": [
+      "json.dumps.txt"
+    ],
+    "expected_phrases": [
+      "non-ASCII"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-002",
+    "question": "What happens when allow_nan is false and a float is out of range?",
+    "relevant_sources": [
+      "json.dumps.txt"
+    ],
+    "expected_phrases": [
+      "ValueError"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-003",
+    "question": "Which JSON decoding hook takes priority when both object hooks are defined?",
+    "relevant_sources": [
+      "json.loads.txt"
+    ],
+    "expected_phrases": [
+      "takes priority"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-004",
+    "question": "How can I use a custom parser for JSON floating point numbers?",
+    "relevant_sources": [
+      "json.loads.txt"
+    ],
+    "expected_phrases": [
+      "parse_float"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-005",
+    "question": "How do I find existing files matching a relative pattern in a directory subtree?",
+    "relevant_sources": [
+      "pathlib.Path.glob.txt"
+    ],
+    "expected_phrases": [
+      "relative pattern"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-006",
+    "question": "How can I make a path absolute and resolve symlinks?",
+    "relevant_sources": [
+      "pathlib.Path.resolve.txt"
+    ],
+    "expected_phrases": [
+      "resolving all symlinks"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-007",
+    "question": "What exception does relative_to raise when paths are not related?",
+    "relevant_sources": [
+      "pathlib.Path.relative_to.txt"
+    ],
+    "expected_phrases": [
+      "ValueError"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-008",
+    "question": "Which Path method opens a file in text mode and closes it after reading?",
+    "relevant_sources": [
+      "pathlib.Path.read_text.txt"
+    ],
+    "expected_phrases": [
+      "text mode"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-009",
+    "question": "How can a SQLite connection make a backup of the database?",
+    "relevant_sources": [
+      "sqlite3.Connection.backup.txt"
+    ],
+    "expected_phrases": [
+      "backup"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-010",
+    "question": "How can I dump a SQLite database into SQL text through an iterator?",
+    "relevant_sources": [
+      "sqlite3.Connection.iterdump.txt"
+    ],
+    "expected_phrases": [
+      "SQL text format"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-011",
+    "question": "Which sets are returned by concurrent futures wait?",
+    "relevant_sources": [
+      "concurrent.futures.wait.txt"
+    ],
+    "expected_phrases": [
+      "not_done",
+      "done"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-012",
+    "question": "When does FIRST_EXCEPTION return if no future raises an exception?",
+    "relevant_sources": [
+      "concurrent.futures.wait.txt"
+    ],
+    "expected_phrases": [
+      "ALL_COMPLETED"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-013",
+    "question": "How does as_completed handle duplicate futures?",
+    "relevant_sources": [
+      "concurrent.futures.as_completed.txt"
+    ],
+    "expected_phrases": [
+      "returned once"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-014",
+    "question": "Which iterator groups consecutive keys from an iterable?",
+    "relevant_sources": [
+      "itertools.groupby.txt"
+    ],
+    "expected_phrases": [
+      "consecutive keys"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-015",
+    "question": "What is the default step for islice?",
+    "relevant_sources": [
+      "itertools.islice.txt"
+    ],
+    "expected_phrases": [
+      "Step defaults to one"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-016",
+    "question": "How does Counter store elements and their counts?",
+    "relevant_sources": [
+      "collections.Counter.txt"
+    ],
+    "expected_phrases": [
+      "dictionary keys",
+      "dictionary values"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-017",
+    "question": "Which sequence is optimized for data access near its endpoints?",
+    "relevant_sources": [
+      "collections.deque.txt"
+    ],
+    "expected_phrases": [
+      "endpoints"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-018",
+    "question": "What happens to the LRU cache size when maxsize is None?",
+    "relevant_sources": [
+      "functools.lru_cache.txt"
+    ],
+    "expected_phrases": [
+      "grow without bound"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-019",
+    "question": "What does typed=True do for cached arguments with different types?",
+    "relevant_sources": [
+      "functools.lru_cache.txt"
+    ],
+    "expected_phrases": [
+      "cached separately"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-020",
+    "question": "How is the initial value used by reduce on an empty iterable?",
+    "relevant_sources": [
+      "functools.reduce.txt"
+    ],
+    "expected_phrases": [
+      "default when the iterable is empty"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-021",
+    "question": "Which function merges sorted streams without pulling all data into memory?",
+    "relevant_sources": [
+      "heapq.merge.txt"
+    ],
+    "expected_phrases": [
+      "does not pull the data into memory all at once"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-022",
+    "question": "Which function finds the n largest elements in a dataset?",
+    "relevant_sources": [
+      "heapq.nlargest.txt"
+    ],
+    "expected_phrases": [
+      "n largest elements"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-023",
+    "question": "Where is a duplicate inserted using bisect_left?",
+    "relevant_sources": [
+      "bisect.bisect_left.txt"
+    ],
+    "expected_phrases": [
+      "before the leftmost"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-024",
+    "question": "Where does insort_right insert an item already present in the list?",
+    "relevant_sources": [
+      "bisect.insort_right.txt"
+    ],
+    "expected_phrases": [
+      "right of the rightmost"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-025",
+    "question": "Which copy function copies both data and metadata?",
+    "relevant_sources": [
+      "shutil.copy2.txt"
+    ],
+    "expected_phrases": [
+      "Copy data and metadata"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-026",
+    "question": "What is the default copy_function used by copytree?",
+    "relevant_sources": [
+      "shutil.copytree.txt"
+    ],
+    "expected_phrases": [
+      "copy2()"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-027",
+    "question": "Which function recursively deletes a directory tree?",
+    "relevant_sources": [
+      "shutil.rmtree.txt"
+    ],
+    "expected_phrases": [
+      "Recursively delete a directory tree"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-028",
+    "question": "What happens when a TemporaryDirectory context is exited?",
+    "relevant_sources": [
+      "tempfile.TemporaryDirectory.txt"
+    ],
+    "expected_phrases": [
+      "directory and everything contained in it are removed"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-029",
+    "question": "Which attribute exposes a NamedTemporaryFile name?",
+    "relevant_sources": [
+      "tempfile.NamedTemporaryFile.txt"
+    ],
+    "expected_phrases": [
+      "'name' attribute"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-030",
+    "question": "How is the median calculated for an even number of data points?",
+    "relevant_sources": [
+      "statistics.median.txt"
+    ],
+    "expected_phrases": [
+      "average of the two middle values"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-031",
+    "question": "What exception does statistics mean raise when data is empty?",
+    "relevant_sources": [
+      "statistics.mean.txt"
+    ],
+    "expected_phrases": [
+      "StatisticsError"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-032",
+    "question": "What n value produces percentiles using quantiles?",
+    "relevant_sources": [
+      "statistics.quantiles.txt"
+    ],
+    "expected_phrases": [
+      "100 for percentiles"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-033",
+    "question": "What string type does compare_digest accept?",
+    "relevant_sources": [
+      "hmac.compare_digest.txt"
+    ],
+    "expected_phrases": [
+      "ASCII only"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-034",
+    "question": "How many components does urlparse return?",
+    "relevant_sources": [
+      "urllib.parse.urlparse.txt"
+    ],
+    "expected_phrases": [
+      "6 components"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-035",
+    "question": "How can I combine a base URL and a relative URL?",
+    "relevant_sources": [
+      "urllib.parse.urljoin.txt"
+    ],
+    "expected_phrases": [
+      "absolute interpretation"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-036",
+    "question": "What does findall return when a regex has multiple capturing groups?",
+    "relevant_sources": [
+      "re.findall.txt"
+    ],
+    "expected_phrases": [
+      "list of tuples"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-037",
+    "question": "Which regular expression function returns an iterator of Match objects?",
+    "relevant_sources": [
+      "re.finditer.txt"
+    ],
+    "expected_phrases": [
+      "Match object"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-038",
+    "question": "Can the replacement argument to re.sub be a callable?",
+    "relevant_sources": [
+      "re.sub.txt"
+    ],
+    "expected_phrases": [
+      "callable"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-039",
+    "question": "Does dedent treat tabs and spaces as equal whitespace?",
+    "relevant_sources": [
+      "textwrap.dedent.txt"
+    ],
+    "expected_phrases": [
+      "they are not equal"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-040",
+    "question": "What does textwrap fill return after wrapping a paragraph?",
+    "relevant_sources": [
+      "textwrap.fill.txt"
+    ],
+    "expected_phrases": [
+      "new string"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-041",
+    "question": "What is the default similarity cutoff for get_close_matches?",
+    "relevant_sources": [
+      "difflib.get_close_matches.txt"
+    ],
+    "expected_phrases": [
+      "0.6"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-042",
+    "question": "Which clock cannot go backward?",
+    "relevant_sources": [
+      "time.monotonic.txt"
+    ],
+    "expected_phrases": [
+      "cannot go backward"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-043",
+    "question": "Which function renames a file while overwriting the destination?",
+    "relevant_sources": [
+      "os.replace.txt"
+    ],
+    "expected_phrases": [
+      "overwriting the destination"
+    ],
+    "answerable": true,
+    "split": "development"
+  },
+  {
+    "id": "ref-044",
+    "question": "What is the monthly price of Python support?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-045",
+    "question": "What is the maximum supported JSON file size in gigabytes?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-046",
+    "question": "What is the maximum database size supported by SQLite?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-047",
+    "question": "Which encryption algorithm protects NamedTemporaryFile contents?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-048",
+    "question": "What is the exact nanosecond accuracy guaranteed by the monotonic clock?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-049",
+    "question": "Which HTTP retry count does urljoin use?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-050",
+    "question": "What is the GPU memory requirement for Counter?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-051",
+    "question": "How many parallel worker threads does Path.read_text create?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-052",
+    "question": "What is the maximum recursion depth allowed by copytree?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  },
+  {
+    "id": "ref-053",
+    "question": "Which operating system kernel version is required by statistics.median?",
+    "relevant_sources": [],
+    "expected_phrases": [],
+    "answerable": false,
+    "split": "development"
+  }
+]

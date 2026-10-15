@@ -1,0 +1,5 @@
+time.monotonic
+
+monotonic() -> float
+
+Monotonic clock, cannot go backward.

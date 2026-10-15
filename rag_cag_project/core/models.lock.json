@@ -1,0 +1,42 @@
+[
+  {
+    "repo": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "files": [
+      {
+        "path": "onnx/model_quint8_avx2.onnx",
+        "size": 23046789,
+        "checksum_type": "sha256",
+        "checksum": "b941bf19f1f1283680f449fa6a7336bb5600bdcd5f84d10ddc5cd72218a0fd21"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 466247,
+        "checksum_type": "git_sha1",
+        "checksum": "cb202bfe2e3c98645018a6d12f182a434c9d3e02"
+      }
+    ],
+    "license": "Apache-2.0",
+    "source_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2"
+  },
+  {
+    "repo": "cross-encoder/ms-marco-MiniLM-L6-v2",
+    "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "files": [
+      {
+        "path": "onnx/model_quint8_avx2.onnx",
+        "size": 23200716,
+        "checksum_type": "sha256",
+        "checksum": "c80a8b34256ea453093d612e3ac48d3d965a0c0a48c7906709af8b8e28461bf9"
+      },
+      {
+        "path": "tokenizer.json",
+        "size": 711396,
+        "checksum_type": "git_sha1",
+        "checksum": "688882a79f44442ddc1f60d70334a7ff5df0fb47"
+      }
+    ],
+    "license": "Apache-2.0",
+    "source_url": "https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2"
+  }
+]

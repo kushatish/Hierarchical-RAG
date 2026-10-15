@@ -1,0 +1,5 @@
+collections.deque
+
+deque([iterable[, maxlen]]) --> deque object
+
+A list-like sequence optimized for data accesses near its endpoints.

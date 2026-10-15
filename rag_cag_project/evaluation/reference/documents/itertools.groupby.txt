@@ -1,0 +1,10 @@
+itertools.groupby
+
+make an iterator that returns consecutive keys and groups from the iterable
+
+iterable
+  Elements to divide into groups according to the key function.
+key
+  A function for computing the group category for each element.
+  If the key function is not specified or is None, the element itself
+  is used for grouping.

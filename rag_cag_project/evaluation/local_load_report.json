@@ -1,0 +1,16 @@
+{
+  "note": "Local repeated-question smoke load; not a production workload or capacity claim. Success requires a cited answer, not just HTTP 200.",
+  "requests": 100,
+  "concurrency": 8,
+  "url": "http://127.0.0.1:8765",
+  "platform": "macOS-27.0.1-x86_64-i386-64bit-Mach-O",
+  "python": "3.14.6",
+  "successes": 100,
+  "failures": 0,
+  "elapsed_seconds": 0.17955854203319177,
+  "throughput_requests_per_second": 556.921430012028,
+  "latency_p50_ms": 9.489124990068376,
+  "latency_p95_ms": 66.9784169876948,
+  "cache_hits": 100,
+  "errors": []
+}

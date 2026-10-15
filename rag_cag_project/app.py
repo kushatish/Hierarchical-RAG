@@ -1,44 +1,66 @@
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import streamlit as st
-import time
+from core.engine import Assistant
 
-from cag.rag_cag_pipeline import cag_rag_pipeline   
+st.set_page_config(page_title="Evidence QA", page_icon="📚", layout="wide")
 
-st.set_page_config(
-    page_title="RAG + CAG Assistant",
-    page_icon="🧠",
-    layout="centered"
-)
+@st.cache_resource
+def assistant():
+    return Assistant()
 
-st.markdown("<h1 style='text-align:center;'>🧠 RAG + CAG Assistant</h1>", unsafe_allow_html=True)
-st.caption("FAISS-based semantic cache + RAG fallback")
+engine = assistant()
+st.title("Evidence QA")
+st.caption("Document answers with page-level evidence and version-aware caching")
+st.info(f"Retrieval: {engine.settings.backend} · Answers: {engine.settings.generator}. "
+        "Extractive mode returns matching source sentences; it does not use an LLM.")
 
-st.divider()
+with st.sidebar:
+    st.header("Document library")
+    uploaded = st.file_uploader("PDF, Markdown or text", type=["pdf", "md", "txt"])
+    if st.button("Add / replace document", disabled=uploaded is None):
+        try:
+            if uploaded.size > 10 * 1024 * 1024:
+                raise ValueError("Maximum file size is 10 MiB")
+            with st.spinner("Reading document…"):
+                with TemporaryDirectory() as directory:
+                    path = Path(directory) / Path(uploaded.name).name
+                    path.write_bytes(uploaded.getvalue())
+                    result = engine.ingest_file(path)
+            st.success("Indexed" if result["changed"] else "Document already up to date")
+        except Exception as exc:
+            st.error(f"Could not index document: {exc}")
+    if st.button("Load fictional demo handbook"):
+        engine.ingest_file(Path(__file__).parent / "data/demo/handbook.md")
+        st.success("Demo loaded")
+    for doc in engine.list_documents():
+        st.write(doc["name"])
+        if st.button("Delete", key=doc["id"]):
+            engine.delete_document(doc["id"])
+            st.rerun()
+    st.caption("Same filename replaces the existing document and invalidates cached answers.")
 
-query = st.text_input(
-    "Ask a question",
-    placeholder="e.g. Explain quantum computing"
-)
-
-if st.button("Submit", use_container_width=True):
-    if not query.strip():
-        st.warning("Please enter a query")
-    else:
-        with st.spinner("Thinking..."):
-            result = cag_rag_pipeline(query)
-
-        st.divider()
-
-        # CACHE STATUS
-        if result["cache_hit"]:
-            st.success("⚡ Cache HIT")
-        else:
-            st.error("🐌 Cache MISS → RAG Triggered")
-
-        col1, col2 = st.columns(2)
-        col1.metric("Similarity", f"{result['similarity']:.2f}")
-        col2.metric("Latency (ms)", result["latency_ms"])
-
-        st.divider()
-        st.subheader("Answer")
-        st.write(result["answer"])
-
+query = st.text_input("Ask about your documents", max_chars=2000, placeholder="What is the minimum attendance requirement?")
+semantic = st.checkbox("Enable experimental semantic cache", value=False,
+                       help="Exact caching is enabled by default. Semantic similarity can confuse different questions; calibrate before enabling.")
+if st.button("Ask", type="primary"):
+    try:
+        with st.spinner("Searching evidence…"):
+            result = engine.ask(query, semantic_cache=semantic)
+        st.session_state["last_answer"] = result
+    except Exception as exc:
+        st.error(f"Could not answer: {exc}")
+if "last_answer" in st.session_state:
+    result = st.session_state["last_answer"]
+    current_revision = engine.revision()
+    if result["revision"] != current_revision:
+        st.warning("The document library changed. Ask again to refresh this answer.")
+    st.write(result["answer"])
+    cols = st.columns(3)
+    cols[0].metric("Request latency", f'{result["latency_ms"]:.1f} ms')
+    cols[1].metric("Cache", result["cache_type"])
+    cols[2].metric("Document revision", result["revision"])
+    for source in result["citations"]:
+        with st.expander(f'[{source["id"]}] {source["source"]} · page {source["page"]}'):
+            st.text(source["text"])
+            st.caption("Retrieved evidence; citation identifiers alone do not prove that every claim is supported.")

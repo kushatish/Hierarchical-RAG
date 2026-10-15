@@ -1,0 +1,4 @@
+# CPU alternative for Python 3.12. Install separately from the optional PyTorch stack.
+onnxruntime==1.19.2
+tokenizers==0.21.1
+numpy==2.3.5
