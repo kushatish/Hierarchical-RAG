@@ -1,0 +1,4 @@
+urllib.parse.urljoin
+
+Join a base URL and a possibly relative URL to form an absolute
+interpretation of the latter.

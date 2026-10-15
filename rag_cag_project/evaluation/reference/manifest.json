@@ -1,0 +1,203 @@
+{
+  "source": "CPython standard-library docstrings",
+  "python": "3.12.14",
+  "license": "PSF License Agreement for Python",
+  "license_url": "https://docs.python.org/3.12/license.html",
+  "documents": [
+    {
+      "file": "json.loads.txt",
+      "symbol": "json.loads",
+      "sha256": "c0674441715ce184bb614d49f9cbec37bb20ea6030f48610982cc41939b91655"
+    },
+    {
+      "file": "json.dumps.txt",
+      "symbol": "json.dumps",
+      "sha256": "e8330515105cab98393fb41fe65c8344948a1eed294a18c12f397410e900f426"
+    },
+    {
+      "file": "pathlib.Path.glob.txt",
+      "symbol": "pathlib.Path.glob",
+      "sha256": "b6bed739ec9ce6b90cf0d37ad057baa06c42b2baa8747a29a8b8add10fc368c4"
+    },
+    {
+      "file": "pathlib.Path.read_text.txt",
+      "symbol": "pathlib.Path.read_text",
+      "sha256": "e27ef673868f077e4f629d90a94c5e08762c0b0b0990cbd8a764f37dbd491f9e"
+    },
+    {
+      "file": "pathlib.Path.resolve.txt",
+      "symbol": "pathlib.Path.resolve",
+      "sha256": "f17453681dee0a2dfa01f6ba54524dce627af542d743ad4a4661b771f87f8257"
+    },
+    {
+      "file": "pathlib.Path.relative_to.txt",
+      "symbol": "pathlib.Path.relative_to",
+      "sha256": "d81ca41c786d08fdd9627bb43a4b25c7ee00a0b2b11c0aaf3862697417859ce9"
+    },
+    {
+      "file": "sqlite3.Connection.backup.txt",
+      "symbol": "sqlite3.Connection.backup",
+      "sha256": "1587ea2d800cad60b78b6eb45104980ed12f304718f639e5ff42925936aba5be"
+    },
+    {
+      "file": "sqlite3.Connection.iterdump.txt",
+      "symbol": "sqlite3.Connection.iterdump",
+      "sha256": "698881c93a8b8c06789261c8c3772e1878b0e1fd0865e6c222d301c039ba7d8d"
+    },
+    {
+      "file": "concurrent.futures.wait.txt",
+      "symbol": "concurrent.futures.wait",
+      "sha256": "fd8080748bc34233e79482a6311b49f3eec8d350126c995320dd0cd309fedb74"
+    },
+    {
+      "file": "concurrent.futures.as_completed.txt",
+      "symbol": "concurrent.futures.as_completed",
+      "sha256": "fb447e84eb460e1ecbc9f03ff56bdd8918d9849501f3b7e0b34bd35439d3a50a"
+    },
+    {
+      "file": "itertools.groupby.txt",
+      "symbol": "itertools.groupby",
+      "sha256": "bc123993badcda2da0c72891ec316d6956819bf3a8645b71d09d73e4c7a59358"
+    },
+    {
+      "file": "itertools.islice.txt",
+      "symbol": "itertools.islice",
+      "sha256": "270dafec5ad77c2964da253cca5ecd6d0f75707b823e6748a4bedd7e367a5749"
+    },
+    {
+      "file": "collections.Counter.txt",
+      "symbol": "collections.Counter",
+      "sha256": "c5d99157d46f2ebf1076e9ef4bb60908e288a75e310abc8591d1877acbb1f21e"
+    },
+    {
+      "file": "collections.deque.txt",
+      "symbol": "collections.deque",
+      "sha256": "a95982056c220e98880fd3fa4ad9ca33968e10135ec4a812e0f2bfe2fe67826a"
+    },
+    {
+      "file": "functools.lru_cache.txt",
+      "symbol": "functools.lru_cache",
+      "sha256": "8cb1c92a80b753faab8537b9da9f23c0dce6d05797b1e7b54736b8310382797b"
+    },
+    {
+      "file": "functools.reduce.txt",
+      "symbol": "functools.reduce",
+      "sha256": "d96753bf5a380727b0660d5153ca1ca7b62ae494d7bb438c9a0376ee3960e9b5"
+    },
+    {
+      "file": "heapq.nlargest.txt",
+      "symbol": "heapq.nlargest",
+      "sha256": "8aa6d34108e75a9f221f4bfad622eed1f1f0248c678286571da72907c3a03c55"
+    },
+    {
+      "file": "heapq.merge.txt",
+      "symbol": "heapq.merge",
+      "sha256": "c10ff5d13cde34d07909893b33874ee1af948f2fd804a0bfb11963d52866ff12"
+    },
+    {
+      "file": "bisect.bisect_left.txt",
+      "symbol": "bisect.bisect_left",
+      "sha256": "76c143a4d180913179d85838dd5a639aecc50ac525fa4a0c58d2576b2912f83a"
+    },
+    {
+      "file": "bisect.insort_right.txt",
+      "symbol": "bisect.insort_right",
+      "sha256": "ce99bb413b8c6a95c447b7a0b2c7dbdc4c3a0309536e6b4f86c55a2406d2ff5f"
+    },
+    {
+      "file": "shutil.copy2.txt",
+      "symbol": "shutil.copy2",
+      "sha256": "ce2922f42410fe7e21b1ee7e79d2f85a5cc1be094ff5d663b3f0a3e78b562770"
+    },
+    {
+      "file": "shutil.copytree.txt",
+      "symbol": "shutil.copytree",
+      "sha256": "adc331341a94ddc372a46bc6eb959524d9f706ed983b28090cf87560064ebf07"
+    },
+    {
+      "file": "shutil.rmtree.txt",
+      "symbol": "shutil.rmtree",
+      "sha256": "6f247622068ae3f86fedfe1c11569762bd2e4d666cecf8d9773074623297bb1a"
+    },
+    {
+      "file": "tempfile.TemporaryDirectory.txt",
+      "symbol": "tempfile.TemporaryDirectory",
+      "sha256": "bd45d9a5032af5e1c2e9f7d35101bb0bddabb61c3fe15d79706fff724ee96c9a"
+    },
+    {
+      "file": "tempfile.NamedTemporaryFile.txt",
+      "symbol": "tempfile.NamedTemporaryFile",
+      "sha256": "4a2227d73b5ce4858e4f88138d112a5037a93b1a965f40d07b7f24b4387f8b97"
+    },
+    {
+      "file": "statistics.median.txt",
+      "symbol": "statistics.median",
+      "sha256": "720f7e98dc3e32c8255c16b39483e7777c81be7a6ccaf4bf596ff46d9c8be320"
+    },
+    {
+      "file": "statistics.mean.txt",
+      "symbol": "statistics.mean",
+      "sha256": "6212b936229a04ba9ba49791bbcb74683d64a20163c58db29903d646e31d48ed"
+    },
+    {
+      "file": "statistics.quantiles.txt",
+      "symbol": "statistics.quantiles",
+      "sha256": "d0fcd74d1644d9a459232a2953ac96954c3e70f13c77325379ff6bda73467aaa"
+    },
+    {
+      "file": "hmac.compare_digest.txt",
+      "symbol": "hmac.compare_digest",
+      "sha256": "d019eb5945c8dd45df4ff0db8463d70c5a9b0ffd8743f53764422003f008d8d5"
+    },
+    {
+      "file": "urllib.parse.urlparse.txt",
+      "symbol": "urllib.parse.urlparse",
+      "sha256": "d18852c0346968a3a80378f1eb7a4d2066ff662dd5a48512be13030cc0a7ff3d"
+    },
+    {
+      "file": "urllib.parse.urljoin.txt",
+      "symbol": "urllib.parse.urljoin",
+      "sha256": "a0274455ebb8d35c6ba54504629f73d41319ad11577ac21d82217a01684a8ffd"
+    },
+    {
+      "file": "re.findall.txt",
+      "symbol": "re.findall",
+      "sha256": "6dcd9b4fe84cdc49e74dd139ff52faa9d3aeaf638cc6587308055bacb81b7519"
+    },
+    {
+      "file": "re.finditer.txt",
+      "symbol": "re.finditer",
+      "sha256": "3c7c173232888ea4aaf40339ef7ac55169e9e4c7a1f565c687a94fb61579ccc3"
+    },
+    {
+      "file": "re.sub.txt",
+      "symbol": "re.sub",
+      "sha256": "7e1e539389f7e1760ea6724246aa342c017daeeaa2f44f2b4b421fdcdc88d1a7"
+    },
+    {
+      "file": "textwrap.dedent.txt",
+      "symbol": "textwrap.dedent",
+      "sha256": "02ca0948e7bd90ed818bf95820a8e1811023746c95985255a56701fd03e3cf44"
+    },
+    {
+      "file": "textwrap.fill.txt",
+      "symbol": "textwrap.fill",
+      "sha256": "d7668f158e9c67dcc2c35dd493c13ea09f6f20be54e91ca816e8ef7f17a9932b"
+    },
+    {
+      "file": "difflib.get_close_matches.txt",
+      "symbol": "difflib.get_close_matches",
+      "sha256": "78997c0bda113bd75a77f0f73f67ce5049dfaa5da43b04221b88fe226080504d"
+    },
+    {
+      "file": "time.monotonic.txt",
+      "symbol": "time.monotonic",
+      "sha256": "46dbda15047848eeabac0e11537e5166686b89439570dac00b1082a10abc34c0"
+    },
+    {
+      "file": "os.replace.txt",
+      "symbol": "os.replace",
+      "sha256": "a508175af7d5f38853d43a2e24278efe8f7c92047b384f0752e0c78138560a41"
+    }
+  ]
+}

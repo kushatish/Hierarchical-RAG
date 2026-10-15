@@ -1,0 +1,19 @@
+tempfile.TemporaryDirectory
+
+Create and return a temporary directory.  This has the same
+behavior as mkdtemp but can be used as a context manager.  For
+example:
+
+    with TemporaryDirectory() as tmpdir:
+        ...
+
+Upon exiting the context, the directory and everything contained
+in it are removed (unless delete=False is passed or an exception
+is raised during cleanup and ignore_cleanup_errors is not True).
+
+Optional Arguments:
+    suffix - A str suffix for the directory name.  (see mkdtemp)
+    prefix - A str prefix for the directory name.  (see mkdtemp)
+    dir - A directory to create this temp dir in.  (see mkdtemp)
+    ignore_cleanup_errors - False; ignore exceptions during cleanup?
+    delete - True; whether the directory is automatically deleted.

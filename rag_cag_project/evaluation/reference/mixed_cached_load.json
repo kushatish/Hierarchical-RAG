@@ -1,0 +1,28 @@
+{
+  "note": "Local HTTP smoke workload; not a production capacity claim. HTTP success and basic answerability expectations are reported separately; neither is factual accuracy.",
+  "workload_question_count": 53,
+  "cache_enabled": true,
+  "content_expectation_matches": 96,
+  "requests": 106,
+  "concurrency": 8,
+  "url": "http://127.0.0.1:8766",
+  "platform": "macOS-27.0.1-x86_64-i386-64bit-Mach-O",
+  "python": "3.14.6",
+  "successes": 106,
+  "failures": 0,
+  "elapsed_seconds": 0.43201387498993427,
+  "throughput_requests_per_second": 245.3624898100084,
+  "latency_p50_ms": 23.063375003403053,
+  "latency_p95_ms": 88.92783400369808,
+  "cache_hits": 44,
+  "errors": [],
+  "test_server_configuration": {
+    "backend": "lexical",
+    "generator": "extractive",
+    "corpus_documents": 39,
+    "sqlite_journal_mode": "WAL",
+    "rate_limit_per_minute": 10000,
+    "max_inflight": 8
+  },
+  "initial_answer_cache": "empty before the uncached phase; uncached requests do not populate it; cached phase starts empty"
+}

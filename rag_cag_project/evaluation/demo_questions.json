@@ -1,0 +1,187 @@
+[
+  {
+    "id": "attendance",
+    "question": "What is the minimum attendance requirement for final examinations?",
+    "expected_phrases": [
+      "75 percent"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "medical",
+    "question": "Who approves medical attendance exemptions?",
+    "expected_phrases": [
+      "academic office"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "cgpa",
+    "question": "What CGPA is required for the merit scholarship?",
+    "expected_phrases": [
+      "8.5"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "income",
+    "question": "What family income limit applies to the scholarship?",
+    "expected_phrases": [
+      "500000"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "ineligible",
+    "question": "Who is not eligible for the merit scholarship?",
+    "expected_phrases": [
+      "disciplinary penalties"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "scholarship-date",
+    "question": "When do scholarship applications close?",
+    "expected_phrases": [
+      "30 September"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "registration",
+    "question": "When must final-year students register for placement?",
+    "expected_phrases": [
+      "15 August"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "offers",
+    "question": "How many accepted placement offers may a student hold?",
+    "expected_phrases": [
+      "only one"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "exception",
+    "question": "Who can grant an exception for another campus placement?",
+    "expected_phrases": [
+      "placement office"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "books",
+    "question": "How many library books may undergraduate students borrow?",
+    "expected_phrases": [
+      "four books"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "loan",
+    "question": "How long can undergraduate students borrow library books?",
+    "expected_phrases": [
+      "fourteen days"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "fine",
+    "question": "What is the late return charge for library books?",
+    "expected_phrases": [
+      "five rupees"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "reference",
+    "question": "Can reference books be borrowed?",
+    "expected_phrases": [
+      "cannot be borrowed"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "quiet",
+    "question": "What are the hostel quiet hours?",
+    "expected_phrases": [
+      "22:00 to 06:00"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "guest",
+    "question": "Who must permit overnight hostel guests?",
+    "expected_phrases": [
+      "warden"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "maintenance",
+    "question": "Where should hostel maintenance requests be submitted?",
+    "expected_phrases": [
+      "facilities portal"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "appeal",
+    "question": "When must a grade appeal be filed?",
+    "expected_phrases": [
+      "seven days"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "appeal-fee",
+    "question": "What is the fee for a grade appeal?",
+    "expected_phrases": [
+      "200 rupees"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "refund",
+    "question": "When is the appeal fee refunded?",
+    "expected_phrases": [
+      "grade changes"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "multi",
+    "question": "What CGPA and income conditions apply to the merit scholarship?",
+    "expected_phrases": [
+      "8.5",
+      "500000"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "unknown-fee",
+    "question": "What is the hostel monthly rent?",
+    "expected_phrases": [],
+    "answerable": false
+  },
+  {
+    "id": "unknown-scholarship",
+    "question": "How much money does the merit scholarship award?",
+    "expected_phrases": [],
+    "answerable": false
+  },
+  {
+    "id": "unknown-library",
+    "question": "When does the library open on Sundays?",
+    "expected_phrases": [],
+    "answerable": false
+  },
+  {
+    "id": "unknown",
+    "question": "What is the orbital period of Neptune?",
+    "expected_phrases": [],
+    "answerable": false
+  }
+]

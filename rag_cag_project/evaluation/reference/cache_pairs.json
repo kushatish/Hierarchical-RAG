@@ -1,0 +1,162 @@
+[
+  {
+    "seed": "What does typed=True change in lru_cache?",
+    "candidate": "What happens for different argument types when lru_cache uses typed=True?",
+    "equivalent": true
+  },
+  {
+    "seed": "How can I clear lru_cache statistics?",
+    "candidate": "How can I reset the cache and its statistics?",
+    "equivalent": true
+  },
+  {
+    "seed": "What happens when lru_cache maxsize is None?",
+    "candidate": "What size limit applies to lru_cache when maxsize is None?",
+    "equivalent": true
+  },
+  {
+    "seed": "How is the median calculated for an even number of values?",
+    "candidate": "How do you find the median when the sample size is even?",
+    "equivalent": true
+  },
+  {
+    "seed": "What does ensure_ascii=False change in json.dumps?",
+    "candidate": "What happens to non-ASCII characters with json.dumps ensure_ascii=False?",
+    "equivalent": true
+  },
+  {
+    "seed": "How can a SQLite connection make a backup?",
+    "candidate": "How can I back up a SQLite database using its connection?",
+    "equivalent": true
+  },
+  {
+    "seed": "What does re.finditer return?",
+    "candidate": "What kind of iterator is returned by re.finditer?",
+    "equivalent": true
+  },
+  {
+    "seed": "How does bisect_left handle duplicate values?",
+    "candidate": "How are existing equal values handled by bisect_left?",
+    "equivalent": true
+  },
+  {
+    "seed": "What does Path.resolve do to symlinks?",
+    "candidate": "What happens to symbolic links when calling Path.resolve?",
+    "equivalent": true
+  },
+  {
+    "seed": "How can I recursively copy a directory tree?",
+    "candidate": "How can I copy a whole directory including subdirectories?",
+    "equivalent": true
+  },
+  {
+    "seed": "What does textwrap.dedent remove?",
+    "candidate": "What whitespace is removed by textwrap.dedent?",
+    "equivalent": true
+  },
+  {
+    "seed": "What happens after leaving a TemporaryDirectory context?",
+    "candidate": "What is cleaned up when a TemporaryDirectory context exits?",
+    "equivalent": true
+  },
+  {
+    "seed": "How does as_completed handle duplicate futures?",
+    "candidate": "How are repeated futures handled by as_completed?",
+    "equivalent": true
+  },
+  {
+    "seed": "What is the late charge for library books?",
+    "candidate": "What is the fee for returning library books late?",
+    "equivalent": true
+  },
+  {
+    "seed": "What CGPA is required for the merit scholarship?",
+    "candidate": "What is the required CGPA for the merit scholarship?",
+    "equivalent": true
+  },
+  {
+    "seed": "When do scholarship applications close?",
+    "candidate": "When is the deadline for submitting scholarship applications?",
+    "equivalent": true
+  },
+  {
+    "seed": "What does typed=True change in lru_cache?",
+    "candidate": "What does typed=False change in lru_cache?",
+    "equivalent": false
+  },
+  {
+    "seed": "What does ensure_ascii=False change in json.dumps?",
+    "candidate": "What does ensure_ascii=True change in json.dumps?",
+    "equivalent": false
+  },
+  {
+    "seed": "What is the required scholarship CGPA of 8.5?",
+    "candidate": "What is the required scholarship CGPA of 5.8?",
+    "equivalent": false
+  },
+  {
+    "seed": "Who is eligible for scholarship?",
+    "candidate": "Who is not eligible for scholarship?",
+    "equivalent": false
+  },
+  {
+    "seed": "What happens when maxsize is None?",
+    "candidate": "What happens when maxsize is 0?",
+    "equivalent": false
+  },
+  {
+    "seed": "What does json.dumps return?",
+    "candidate": "What does json.loads return?",
+    "equivalent": false
+  },
+  {
+    "seed": "What does re.findall return?",
+    "candidate": "What does re.finditer return?",
+    "equivalent": false
+  },
+  {
+    "seed": "How does bisect_left insert duplicate values?",
+    "candidate": "How does insort_right insert duplicate values?",
+    "equivalent": false
+  },
+  {
+    "seed": "What does object_hook do in JSON decoding?",
+    "candidate": "What does object_pairs_hook do in JSON decoding?",
+    "equivalent": false
+  },
+  {
+    "seed": "What does FIRST_COMPLETED mean for futures.wait?",
+    "candidate": "What does FIRST_EXCEPTION mean for futures.wait?",
+    "equivalent": false
+  },
+  {
+    "seed": "What does the median of numeric data mean?",
+    "candidate": "What does the mean of numeric data mean?",
+    "equivalent": false
+  },
+  {
+    "seed": "When is the scholarship application deadline?",
+    "candidate": "When is the placement registration deadline?",
+    "equivalent": false
+  },
+  {
+    "seed": "What is the library return charge?",
+    "candidate": "What is the academic appeal charge?",
+    "equivalent": false
+  },
+  {
+    "seed": "What happens when follow_symlinks is true?",
+    "candidate": "What happens when follow_symlinks is false?",
+    "equivalent": false
+  },
+  {
+    "seed": "What is the cutoff default for get_close_matches?",
+    "candidate": "What is the n default for get_close_matches?",
+    "equivalent": false
+  },
+  {
+    "seed": "What happens to a negative fee of -10?",
+    "candidate": "What happens to a positive fee of 10?",
+    "equivalent": false
+  }
+]

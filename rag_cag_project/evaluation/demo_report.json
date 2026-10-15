@@ -1,0 +1,1101 @@
+{
+  "purpose": "Development smoke benchmark; not held-out evidence for resume claims",
+  "python": "3.12.14",
+  "backend": "lexical",
+  "generator": "extractive",
+  "dataset": "demo_questions.json",
+  "dataset_sha256": "5a16ff41010909c861dec1eb6229426c45795a00ea3e9da554640cf1581e1333",
+  "engine_version": "indexed-prose-v4",
+  "prompt_version": "grounded-v1",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "metric_definitions": {
+    "document_recall_at": "Fraction of annotated relevant source documents present in the first k returned contexts; only for cases with source labels",
+    "document_mrr_at_5": "Mean reciprocal rank of the first annotated relevant source in the first five contexts",
+    "citation_source_precision_when_cited": "Fraction of cited source IDs matching document labels, conditional on a cited answer; NOT per-claim entailment",
+    "evidence_phrase_recall": "Mean fraction of gold phrases present in retrieved context for answerable questions; NOT document Recall@k",
+    "answer_phrase_coverage": "Mean fraction of gold phrases in answer text; NOT factual correctness",
+    "unanswerable_abstention_rate": "Fraction of labelled unanswerable questions returning insufficient evidence",
+    "latency": "Local request wall time; model warmup not separated; small sample, not a load test. Token usage excludes cache priming requests."
+  },
+  "settings": {
+    "backend": "lexical",
+    "generator": "extractive",
+    "rerank": false,
+    "parent_size": 240,
+    "child_size": 60,
+    "overlap": 12,
+    "top_k": 5,
+    "context_words": 1200,
+    "cache_threshold": 0.97,
+    "cache_ttl": 3600,
+    "cache_capacity": 1000
+  },
+  "documents": 1,
+  "corpus": [
+    {
+      "id": "a0a1ca15ef93a328cc20",
+      "name": "handbook.md",
+      "digest": "464636915bd3610f22c71d57605c460eacfc7bf31c23ceb495b6d45290067ccb"
+    }
+  ],
+  "configurations": {
+    "flat": {
+      "document_recall_at": {
+        "1": null,
+        "3": null,
+        "5": null
+      },
+      "document_mrr_at_5": null,
+      "citation_source_precision_when_cited": null,
+      "answerable_citation_coverage": null,
+      "queries": 24,
+      "measured_request_generation_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "evidence_phrase_recall": 1.0,
+      "answer_phrase_coverage": 1.0,
+      "unanswerable_abstention_rate": 1,
+      "latency_p50_ms": 1.556,
+      "latency_p95_ms": 1.887,
+      "cache_hit_rate": 0.0,
+      "outputs": [
+        {
+          "id": "attendance",
+          "answer": "Students must maintain at least 75 percent attendance to sit for final examinations. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "medical",
+          "answer": "Medical exemptions require approval from the academic office. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "cgpa",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "income",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "ineligible",
+          "answer": "Students with active disciplinary penalties are not eligible for the merit scholarship. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "scholarship-date",
+          "answer": "Scholarship applications close on 30 September each academic year. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "registration",
+          "answer": "Final-year students must register through the placement portal before 15 August. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "offers",
+          "answer": "A student may hold only one accepted placement offer. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "exception",
+          "answer": "After accepting an offer, the student cannot apply for another campus placement unless the placement office grants an exception. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "books",
+          "answer": "Undergraduate students may borrow four books for fourteen days. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "loan",
+          "answer": "Undergraduate students may borrow four books for fourteen days. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "fine",
+          "answer": "The late return charge is five rupees per book per day. [1]\nReference books cannot be borrowed and must remain in the library. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "reference",
+          "answer": "Reference books cannot be borrowed and must remain in the library. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "quiet",
+          "answer": "Hostel quiet hours run from 22:00 to 06:00. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "guest",
+          "answer": "Overnight guests require written permission from the warden. [1]\nHostel maintenance requests must be submitted through the facilities portal. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "maintenance",
+          "answer": "Hostel maintenance requests must be submitted through the facilities portal. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "answer": "A grade appeal must be filed within seven days of result publication. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "appeal-fee",
+          "answer": "The appeal fee is 200 rupees per course. [1]\nThe fee is refunded if the grade changes after review. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "refund",
+          "answer": "The appeal fee is 200 rupees per course. [1]\nThe fee is refunded if the grade changes after review. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "multi",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-fee",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-scholarship",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-library",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            },
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": []
+        }
+      ]
+    },
+    "hierarchical": {
+      "document_recall_at": {
+        "1": null,
+        "3": null,
+        "5": null
+      },
+      "document_mrr_at_5": null,
+      "citation_source_precision_when_cited": null,
+      "answerable_citation_coverage": null,
+      "queries": 24,
+      "measured_request_generation_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "evidence_phrase_recall": 1.0,
+      "answer_phrase_coverage": 1.0,
+      "unanswerable_abstention_rate": 1,
+      "latency_p50_ms": 1.5885,
+      "latency_p95_ms": 1.763,
+      "cache_hit_rate": 0.0,
+      "outputs": [
+        {
+          "id": "attendance",
+          "answer": "Students must maintain at least 75 percent attendance to sit for final examinations. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "medical",
+          "answer": "Medical exemptions require approval from the academic office. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "cgpa",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "income",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "ineligible",
+          "answer": "Students with active disciplinary penalties are not eligible for the merit scholarship. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "scholarship-date",
+          "answer": "Scholarship applications close on 30 September each academic year. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "registration",
+          "answer": "Final-year students must register through the placement portal before 15 August. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "offers",
+          "answer": "A student may hold only one accepted placement offer. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "exception",
+          "answer": "After accepting an offer, the student cannot apply for another campus placement unless the placement office grants an exception. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "books",
+          "answer": "Undergraduate students may borrow four books for fourteen days. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "loan",
+          "answer": "Undergraduate students may borrow four books for fourteen days. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "fine",
+          "answer": "The late return charge is five rupees per book per day. [1]\nReference books cannot be borrowed and must remain in the library. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "reference",
+          "answer": "Reference books cannot be borrowed and must remain in the library. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "quiet",
+          "answer": "Hostel quiet hours run from 22:00 to 06:00. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "guest",
+          "answer": "Overnight guests require written permission from the warden. [1]\nHostel maintenance requests must be submitted through the facilities portal. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "maintenance",
+          "answer": "Hostel maintenance requests must be submitted through the facilities portal. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "answer": "A grade appeal must be filed within seven days of result publication. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "appeal-fee",
+          "answer": "A grade appeal must be filed within seven days of result publication. [1]\nThe appeal fee is 200 rupees per course. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "refund",
+          "answer": "The appeal fee is 200 rupees per course. [1]\nThe fee is refunded if the grade changes after review. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "multi",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-fee",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-scholarship",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-library",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "disabled",
+          "sources": []
+        }
+      ]
+    },
+    "hierarchical_warm_exact_cache": {
+      "document_recall_at": {
+        "1": null,
+        "3": null,
+        "5": null
+      },
+      "document_mrr_at_5": null,
+      "citation_source_precision_when_cited": null,
+      "answerable_citation_coverage": null,
+      "queries": 24,
+      "measured_request_generation_usage": {
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "evidence_phrase_recall": 1.0,
+      "answer_phrase_coverage": 1.0,
+      "unanswerable_abstention_rate": 1,
+      "latency_p50_ms": 1.3425,
+      "latency_p95_ms": 2.901,
+      "cache_hit_rate": 0.8333333333333334,
+      "outputs": [
+        {
+          "id": "attendance",
+          "answer": "Students must maintain at least 75 percent attendance to sit for final examinations. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "medical",
+          "answer": "Medical exemptions require approval from the academic office. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "cgpa",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "income",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "ineligible",
+          "answer": "Students with active disciplinary penalties are not eligible for the merit scholarship. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "scholarship-date",
+          "answer": "Scholarship applications close on 30 September each academic year. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "registration",
+          "answer": "Final-year students must register through the placement portal before 15 August. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "offers",
+          "answer": "A student may hold only one accepted placement offer. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "exception",
+          "answer": "After accepting an offer, the student cannot apply for another campus placement unless the placement office grants an exception. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "books",
+          "answer": "Undergraduate students may borrow four books for fourteen days. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "loan",
+          "answer": "Undergraduate students may borrow four books for fourteen days. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "fine",
+          "answer": "The late return charge is five rupees per book per day. [1]\nReference books cannot be borrowed and must remain in the library. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "reference",
+          "answer": "Reference books cannot be borrowed and must remain in the library. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "quiet",
+          "answer": "Hostel quiet hours run from 22:00 to 06:00. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "guest",
+          "answer": "Overnight guests require written permission from the warden. [1]\nHostel maintenance requests must be submitted through the facilities portal. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "maintenance",
+          "answer": "Hostel maintenance requests must be submitted through the facilities portal. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "appeal",
+          "answer": "A grade appeal must be filed within seven days of result publication. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "appeal-fee",
+          "answer": "A grade appeal must be filed within seven days of result publication. [1]\nThe appeal fee is 200 rupees per course. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "refund",
+          "answer": "The appeal fee is 200 rupees per course. [1]\nThe fee is refunded if the grade changes after review. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "multi",
+          "answer": "The merit scholarship requires a CGPA of at least 8.5 and annual family income below 500000 rupees. [1]",
+          "cache_type": "exact",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-fee",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "miss",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-scholarship",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "miss",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown-library",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "miss",
+          "sources": [
+            {
+              "source": "handbook.md",
+              "page": 1
+            }
+          ]
+        },
+        {
+          "id": "unknown",
+          "answer": "Insufficient evidence in the indexed documents.",
+          "cache_type": "miss",
+          "sources": []
+        }
+      ]
+    }
+  },
+  "reranking": "Not run; pass --rerank after installing requirements-ml.txt",
+  "cache_smoke": {
+    "pairs": [
+      {
+        "seed": "scholarship CGPA requirement",
+        "candidate": "CGPA scholarship requirement",
+        "equivalent": true,
+        "hit": true,
+        "similarity": 1.0
+      },
+      {
+        "seed": "library loan duration",
+        "candidate": "loan duration library",
+        "equivalent": true,
+        "hit": false,
+        "similarity": 0.0
+      },
+      {
+        "seed": "Who is eligible for scholarship?",
+        "candidate": "Who is not eligible for scholarship?",
+        "equivalent": false,
+        "hit": false,
+        "similarity": 0.0
+      },
+      {
+        "seed": "What is the CGPA requirement for scholarship?",
+        "candidate": "What is the income requirement for scholarship?",
+        "equivalent": false,
+        "hit": false,
+        "similarity": 0.0
+      },
+      {
+        "seed": "What is the library late return charge?",
+        "candidate": "What is the appeal fee?",
+        "equivalent": false,
+        "hit": false,
+        "similarity": 0.0
+      },
+      {
+        "seed": "When do scholarship applications close?",
+        "candidate": "When must placement registration close?",
+        "equivalent": false,
+        "hit": false,
+        "similarity": 0.0
+      },
+      {
+        "seed": "Is CGPA 8.5 sufficient for scholarship?",
+        "candidate": "Is CGPA 7.5 sufficient for scholarship?",
+        "equivalent": false,
+        "hit": false,
+        "similarity": 0.0
+      },
+      {
+        "seed": "Can reference books be borrowed?",
+        "candidate": "Can library books be borrowed?",
+        "equivalent": false,
+        "hit": false,
+        "similarity": 0.0
+      }
+    ],
+    "hit_precision": 1.0,
+    "equivalent_pair_hit_recall": 0.5,
+    "note": "Tiny development smoke set. Two positive pairs are word reorderings, not a realistic paraphrase benchmark."
+  }
+}

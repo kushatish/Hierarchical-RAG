@@ -1,0 +1,15 @@
+.git
+.env
+.venv
+**/__pycache__
+**/*.sqlite3
+chroma_db
+rag_cag_project/share
+rag_cag_project/etc
+
+**/*.sqlite3-*
+rag_cag_project/data/uploads
+
+rag_cag_project/data/models
+.model-cache
+deliverables

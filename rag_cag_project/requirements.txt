@@ -1,23 +1,6 @@
-# Core
-numpy
-python-dotenv
-
-# Embeddings
-sentence-transformers
-torch
-
-# Vector Store / Similarity
-faiss-cpu
-
-# LLM / Generation
-langchain
-langchain-community
-
-# Optional (only if using Gemini / OpenAI)
-google-generativeai
-
-# Document Loading
-pypdf
-
-# App (only if you have UI)
-streamlit
+# Supported runtime: Python 3.11 or 3.12. Direct dependencies pinned for reproducibility.
+fastapi==0.115.12
+uvicorn==0.34.2
+python-multipart==0.0.20
+pypdf==5.5.0
+streamlit==1.45.1

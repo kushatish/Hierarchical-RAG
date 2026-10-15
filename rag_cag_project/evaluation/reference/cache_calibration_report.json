@@ -1,0 +1,312 @@
+{
+  "note": "Development-set threshold sweep only; not a recommendation to deploy any threshold. Corpus/generator cache scoping remains mandatory.",
+  "backend": "onnx",
+  "pairs": [
+    {
+      "seed": "What does typed=True change in lru_cache?",
+      "candidate": "What happens for different argument types when lru_cache uses typed=True?",
+      "equivalent": true,
+      "compatible": false,
+      "score": 0.8755808472633362
+    },
+    {
+      "seed": "How can I clear lru_cache statistics?",
+      "candidate": "How can I reset the cache and its statistics?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.7013835310935974
+    },
+    {
+      "seed": "What happens when lru_cache maxsize is None?",
+      "candidate": "What size limit applies to lru_cache when maxsize is None?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.9281502962112427
+    },
+    {
+      "seed": "How is the median calculated for an even number of values?",
+      "candidate": "How do you find the median when the sample size is even?",
+      "equivalent": true,
+      "compatible": false,
+      "score": 0.77070152759552
+    },
+    {
+      "seed": "What does ensure_ascii=False change in json.dumps?",
+      "candidate": "What happens to non-ASCII characters with json.dumps ensure_ascii=False?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.9155524969100952
+    },
+    {
+      "seed": "How can a SQLite connection make a backup?",
+      "candidate": "How can I back up a SQLite database using its connection?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.8970025181770325
+    },
+    {
+      "seed": "What does re.finditer return?",
+      "candidate": "What kind of iterator is returned by re.finditer?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.767271876335144
+    },
+    {
+      "seed": "How does bisect_left handle duplicate values?",
+      "candidate": "How are existing equal values handled by bisect_left?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.8971364498138428
+    },
+    {
+      "seed": "What does Path.resolve do to symlinks?",
+      "candidate": "What happens to symbolic links when calling Path.resolve?",
+      "equivalent": true,
+      "compatible": false,
+      "score": 0.8705837726593018
+    },
+    {
+      "seed": "How can I recursively copy a directory tree?",
+      "candidate": "How can I copy a whole directory including subdirectories?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.7031465768814087
+    },
+    {
+      "seed": "What does textwrap.dedent remove?",
+      "candidate": "What whitespace is removed by textwrap.dedent?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.8176324367523193
+    },
+    {
+      "seed": "What happens after leaving a TemporaryDirectory context?",
+      "candidate": "What is cleaned up when a TemporaryDirectory context exits?",
+      "equivalent": true,
+      "compatible": false,
+      "score": 0.9054450988769531
+    },
+    {
+      "seed": "How does as_completed handle duplicate futures?",
+      "candidate": "How are repeated futures handled by as_completed?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.9110479354858398
+    },
+    {
+      "seed": "What is the late charge for library books?",
+      "candidate": "What is the fee for returning library books late?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.8592807054519653
+    },
+    {
+      "seed": "What CGPA is required for the merit scholarship?",
+      "candidate": "What is the required CGPA for the merit scholarship?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.9843153953552246
+    },
+    {
+      "seed": "When do scholarship applications close?",
+      "candidate": "When is the deadline for submitting scholarship applications?",
+      "equivalent": true,
+      "compatible": true,
+      "score": 0.7791696786880493
+    },
+    {
+      "seed": "What does typed=True change in lru_cache?",
+      "candidate": "What does typed=False change in lru_cache?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.9797095060348511
+    },
+    {
+      "seed": "What does ensure_ascii=False change in json.dumps?",
+      "candidate": "What does ensure_ascii=True change in json.dumps?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.982306182384491
+    },
+    {
+      "seed": "What is the required scholarship CGPA of 8.5?",
+      "candidate": "What is the required scholarship CGPA of 5.8?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.990121603012085
+    },
+    {
+      "seed": "Who is eligible for scholarship?",
+      "candidate": "Who is not eligible for scholarship?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.937380850315094
+    },
+    {
+      "seed": "What happens when maxsize is None?",
+      "candidate": "What happens when maxsize is 0?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.928746223449707
+    },
+    {
+      "seed": "What does json.dumps return?",
+      "candidate": "What does json.loads return?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.6926618218421936
+    },
+    {
+      "seed": "What does re.findall return?",
+      "candidate": "What does re.finditer return?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.8069747090339661
+    },
+    {
+      "seed": "How does bisect_left insert duplicate values?",
+      "candidate": "How does insort_right insert duplicate values?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.6832495927810669
+    },
+    {
+      "seed": "What does object_hook do in JSON decoding?",
+      "candidate": "What does object_pairs_hook do in JSON decoding?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.8903850317001343
+    },
+    {
+      "seed": "What does FIRST_COMPLETED mean for futures.wait?",
+      "candidate": "What does FIRST_EXCEPTION mean for futures.wait?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.7556657791137695
+    },
+    {
+      "seed": "What does the median of numeric data mean?",
+      "candidate": "What does the mean of numeric data mean?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.765239953994751
+    },
+    {
+      "seed": "When is the scholarship application deadline?",
+      "candidate": "When is the placement registration deadline?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.5735288858413696
+    },
+    {
+      "seed": "What is the library return charge?",
+      "candidate": "What is the academic appeal charge?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.4550105631351471
+    },
+    {
+      "seed": "What happens when follow_symlinks is true?",
+      "candidate": "What happens when follow_symlinks is false?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.9659733176231384
+    },
+    {
+      "seed": "What is the cutoff default for get_close_matches?",
+      "candidate": "What is the n default for get_close_matches?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.867484450340271
+    },
+    {
+      "seed": "What happens to a negative fee of -10?",
+      "candidate": "What happens to a positive fee of 10?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.8158326148986816
+    }
+  ],
+  "thresholds": [
+    {
+      "threshold": 0.75,
+      "true_positives": 10,
+      "false_positives": 5,
+      "false_negatives": 6,
+      "true_negatives": 11,
+      "precision": 0.6666666666666666,
+      "recall": 0.625,
+      "false_hit_rate": 0.3125
+    },
+    {
+      "threshold": 0.8,
+      "true_positives": 8,
+      "false_positives": 3,
+      "false_negatives": 8,
+      "true_negatives": 13,
+      "precision": 0.7272727272727273,
+      "recall": 0.5,
+      "false_hit_rate": 0.1875
+    },
+    {
+      "threshold": 0.85,
+      "true_positives": 7,
+      "false_positives": 2,
+      "false_negatives": 9,
+      "true_negatives": 14,
+      "precision": 0.7777777777777778,
+      "recall": 0.4375,
+      "false_hit_rate": 0.125
+    },
+    {
+      "threshold": 0.9,
+      "true_positives": 4,
+      "false_positives": 0,
+      "false_negatives": 12,
+      "true_negatives": 16,
+      "precision": 1.0,
+      "recall": 0.25,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.95,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 15,
+      "true_negatives": 16,
+      "precision": 1.0,
+      "recall": 0.0625,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.97,
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 15,
+      "true_negatives": 16,
+      "precision": 1.0,
+      "recall": 0.0625,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.99,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 16,
+      "true_negatives": 16,
+      "precision": null,
+      "recall": 0.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 1.0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 16,
+      "true_negatives": 16,
+      "precision": null,
+      "recall": 0.0,
+      "false_hit_rate": 0.0
+    }
+  ]
+}

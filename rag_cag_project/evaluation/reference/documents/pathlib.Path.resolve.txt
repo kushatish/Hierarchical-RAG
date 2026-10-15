@@ -1,0 +1,4 @@
+pathlib.Path.resolve
+
+Make the path absolute, resolving all symlinks on the way and also
+normalizing it.

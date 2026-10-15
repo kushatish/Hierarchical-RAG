@@ -1,0 +1,42 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - run: pip install -r rag_cag_project/requirements-dev.txt
+      - run: python -m unittest discover -s tests -v
+        working-directory: rag_cag_project
+      - run: python -m evaluation.benchmark --output /tmp/benchmark.json
+        working-directory: rag_cag_project
+      - run: python -m evaluation.benchmark --dataset evaluation/reference/questions.json --documents evaluation/reference/documents --output /tmp/reference.json
+        working-directory: rag_cag_project
+  container:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t evidence-qa-test .
+      - name: Start protected API
+        run: docker run -d --name qa-test -p 127.0.0.1:8000:8000 -e RAG_API_KEY=ci-only-test-key evidence-qa-test
+      - name: Check readiness and document ingestion
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8000/ready; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:8000/ready
+          curl -fsS -H 'X-API-Key: ci-only-test-key' -F 'file=@rag_cag_project/data/demo/handbook.md' http://127.0.0.1:8000/documents
+          curl -fsS -H 'X-API-Key: ci-only-test-key' -H 'Content-Type: application/json' -d '{"query":"What is the minimum attendance requirement?"}' http://127.0.0.1:8000/query > /tmp/answer.json
+          python -c "import json; r=json.load(open('/tmp/answer.json')); assert '75 percent' in r['answer']; assert r['cited_ids']"
+      - if: always()
+        run: docker logs qa-test
+      - if: always()
+        run: docker rm -f qa-test

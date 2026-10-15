@@ -1,0 +1,3 @@
+pathlib.Path.read_text
+
+Open the file in text mode, read it, and close the file.

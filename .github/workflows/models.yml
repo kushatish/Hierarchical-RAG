@@ -1,0 +1,28 @@
+name: CPU model verification
+on: workflow_dispatch
+jobs:
+  model-test:
+    runs-on: ubuntu-latest
+    env:
+      RAG_MODEL_DIR: ${{ github.workspace }}/.model-cache
+      RAG_RUN_MODEL_TESTS: '1'
+    defaults:
+      run:
+        working-directory: rag_cag_project
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt -r requirements-onnx.txt
+      - uses: actions/cache@v4
+        with:
+          path: .model-cache
+          key: cpu-models-${{ hashFiles('rag_cag_project/core/models.lock.json') }}
+      - run: python -m core.onnx_models --download
+      - run: python -m unittest tests.test_onnx -v
+      - run: python -m evaluation.benchmark --backend onnx --rerank --dataset evaluation/reference/questions.json --documents evaluation/reference/documents --output /tmp/cpu-report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cpu-benchmark
+          path: /tmp/cpu-report.json

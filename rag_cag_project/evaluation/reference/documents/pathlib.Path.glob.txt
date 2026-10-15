@@ -1,0 +1,4 @@
+pathlib.Path.glob
+
+Iterate over this subtree and yield all existing files (of any
+kind, including directories) matching the given relative pattern.

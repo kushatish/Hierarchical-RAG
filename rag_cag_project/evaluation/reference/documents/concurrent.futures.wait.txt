@@ -1,0 +1,25 @@
+concurrent.futures.wait
+
+Wait for the futures in the given sequence to complete.
+
+Args:
+    fs: The sequence of Futures (possibly created by different Executors) to
+        wait upon.
+    timeout: The maximum number of seconds to wait. If None, then there
+        is no limit on the wait time.
+    return_when: Indicates when this function should return. The options
+        are:
+
+        FIRST_COMPLETED - Return when any future finishes or is
+                          cancelled.
+        FIRST_EXCEPTION - Return when any future finishes by raising an
+                          exception. If no future raises an exception
+                          then it is equivalent to ALL_COMPLETED.
+        ALL_COMPLETED -   Return when all futures finish or are cancelled.
+
+Returns:
+    A named 2-tuple of sets. The first set, named 'done', contains the
+    futures that completed (is finished or cancelled) before the wait
+    completed. The second set, named 'not_done', contains uncompleted
+    futures. Duplicate futures given to *fs* are removed and will be
+    returned only once.

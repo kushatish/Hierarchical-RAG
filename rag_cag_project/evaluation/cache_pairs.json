@@ -1,0 +1,42 @@
+[
+  {
+    "seed": "scholarship CGPA requirement",
+    "candidate": "CGPA scholarship requirement",
+    "equivalent": true
+  },
+  {
+    "seed": "library loan duration",
+    "candidate": "loan duration library",
+    "equivalent": true
+  },
+  {
+    "seed": "Who is eligible for scholarship?",
+    "candidate": "Who is not eligible for scholarship?",
+    "equivalent": false
+  },
+  {
+    "seed": "What is the CGPA requirement for scholarship?",
+    "candidate": "What is the income requirement for scholarship?",
+    "equivalent": false
+  },
+  {
+    "seed": "What is the library late return charge?",
+    "candidate": "What is the appeal fee?",
+    "equivalent": false
+  },
+  {
+    "seed": "When do scholarship applications close?",
+    "candidate": "When must placement registration close?",
+    "equivalent": false
+  },
+  {
+    "seed": "Is CGPA 8.5 sufficient for scholarship?",
+    "candidate": "Is CGPA 7.5 sufficient for scholarship?",
+    "equivalent": false
+  },
+  {
+    "seed": "Can reference books be borrowed?",
+    "candidate": "Can library books be borrowed?",
+    "equivalent": false
+  }
+]

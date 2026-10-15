@@ -1,0 +1,144 @@
+{
+  "note": "Development-set threshold sweep only; not a recommendation to deploy any threshold. Corpus/generator cache scoping remains mandatory.",
+  "backend": "lexical",
+  "pairs": [
+    {
+      "seed": "scholarship CGPA requirement",
+      "candidate": "CGPA scholarship requirement",
+      "equivalent": true,
+      "compatible": true,
+      "score": 1.0
+    },
+    {
+      "seed": "library loan duration",
+      "candidate": "loan duration library",
+      "equivalent": true,
+      "compatible": true,
+      "score": 1.0
+    },
+    {
+      "seed": "Who is eligible for scholarship?",
+      "candidate": "Who is not eligible for scholarship?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.8164965809277261
+    },
+    {
+      "seed": "What is the CGPA requirement for scholarship?",
+      "candidate": "What is the income requirement for scholarship?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.6666666666666666
+    },
+    {
+      "seed": "What is the library late return charge?",
+      "candidate": "What is the appeal fee?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.0
+    },
+    {
+      "seed": "When do scholarship applications close?",
+      "candidate": "When must placement registration close?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.4472135954999579
+    },
+    {
+      "seed": "Is CGPA 8.5 sufficient for scholarship?",
+      "candidate": "Is CGPA 7.5 sufficient for scholarship?",
+      "equivalent": false,
+      "compatible": false,
+      "score": 0.8
+    },
+    {
+      "seed": "Can reference books be borrowed?",
+      "candidate": "Can library books be borrowed?",
+      "equivalent": false,
+      "compatible": true,
+      "score": 0.6666666666666666
+    }
+  ],
+  "thresholds": [
+    {
+      "threshold": 0.75,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.8,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.85,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.9,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.95,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.97,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 0.99,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    },
+    {
+      "threshold": 1.0,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_hit_rate": 0.0
+    }
+  ]
+}
